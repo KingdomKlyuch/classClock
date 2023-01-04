@@ -23,10 +23,7 @@ class Clock {
       let secs = date.getSeconds();
       if (secs < 10) secs = '0' + secs;
   
-      let output = this._template
-        .replace('h', hours)
-        .replace('m', mins)
-        .replace('s', secs);
+      let output = '${hours}:${mins}:${secs}';
   
       console.log(output);
     }
