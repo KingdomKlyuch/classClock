@@ -45,3 +45,16 @@ let clock = new Clock({ template: 'h:m:s' });
 clock.start();
 
 console.log(clock.template);
+
+class Display {
+    constructor() {}
+  
+    display(clock) {
+      const element = document.querySelector('.clock');
+      element.innerHTML = clock.template;
+    }
+  }
+  
+  const display = new Display();
+  display.display(clock);
+  
